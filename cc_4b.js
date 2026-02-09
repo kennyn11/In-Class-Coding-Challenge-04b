@@ -6,16 +6,16 @@ const products = [
   { sku: "5555", name: "Notebook", category: "office", price: 5.00, inventory: 150 }
 ];
 const discountedProducts = products.map(product=> {
-let discountRate = 0;
+let discount = 0;
 switch (product.category) {
     case "groceries":
-        discountRate = .10;
+        discount = .10;
         break;
     case "household":
-        discountRate = .15;
+        discount = .15;
         break;
     case "office":
-        discountRate = .5
+        discount = .5
         break;
 }
 })
