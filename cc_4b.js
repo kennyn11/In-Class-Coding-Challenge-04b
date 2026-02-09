@@ -17,7 +17,8 @@ switch (product.category) {
 }
 })
 return {
-    ..product,
-    promoPrice: Number((product.price * (1 - discountRate)).toFixed(2))
+    ...product,
+    promoPrice: Number((product.price * (1 - discountRate)))
 };
+
 console.log(discountedProducts);
