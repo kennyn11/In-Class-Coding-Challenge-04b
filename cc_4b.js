@@ -18,10 +18,10 @@ switch (product.category) {
         discount = .5
         break;
 }
-})
+
 return {
     ...product,
-    promoPrice: Number((product.price * (1 - discountRate)))
+    promoPrice: Number((product.price * (1 - discount)))
 };
-
+})
 console.log(discountedProducts);
