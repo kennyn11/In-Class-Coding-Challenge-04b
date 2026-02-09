@@ -10,10 +10,13 @@ let discountRate = 0;
 switch (product.category) {
     case "groceries":
         discountRate = .10;
+        break;
     case "household":
         discountRate = .15;
+        break;
     case "office":
         discountRate = .5
+        break;
 }
 })
 return {
