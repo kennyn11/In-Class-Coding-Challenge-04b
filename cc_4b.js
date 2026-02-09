@@ -17,6 +17,8 @@ switch (product.category) {
     case "office":
         discount = .5
         break;
+    default:
+        console.log("No Discount!")
 }
 
 return {
