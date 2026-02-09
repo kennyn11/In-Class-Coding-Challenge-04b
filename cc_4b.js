@@ -1,7 +1,23 @@
 const products = [
-  { sku: "sku-001", name: "Tea", category: "groceries", price: 10.00, inventory: 60 },
-  { sku: "sku-002", name: "Coffee", category: "groceries", price: 15.00, inventory: 100 },
-  { sku: "sku-003", name: "Organic Coffee", category: "groceries", price: 18.00, inventory: 50 },
-  { sku: "sku-004", name: "Laundry Detergent", category: "household", price: 20.00, inventory: 30 },
-  { sku: "sku-005", name: "Notebook", category: "stationary", price: 5.00, inventory: 150 }
+  { sku: "1111", name: "Tea", category: "groceries", price: 10.00, inventory: 60 },
+  { sku: "2222", name: "Coffee", category: "groceries", price: 15.00, inventory: 100 },
+  { sku: "3333", name: "Organic Coffee", category: "groceries", price: 18.00, inventory: 50 },
+  { sku: "4444", name: "Laundry Detergent", category: "household", price: 20.00, inventory: 30 },
+  { sku: "5555", name: "Notebook", category: "office", price: 5.00, inventory: 150 }
 ];
+const discountedProducts = products.map(product=> {
+let discountRate = 0;
+switch (product.category) {
+    case "groceries":
+        discountRate = .10;
+    case "household":
+        discountRate = .15;
+    case "office":
+        discountRate = .5
+}
+})
+return {
+    ..product,
+    promoPrice: Number((product.price * (1 - discountRate)).toFixed(2))
+};
+console.log(discountedProducts);
